@@ -39,4 +39,4 @@ The [**Transformer Models**](https://github.com/ThinamXx/HuggingFace/blob/main/0
 
 **Translation**
 
-![Image](![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/Day%2026.PNG)
+![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/Day%2026.PNG)
