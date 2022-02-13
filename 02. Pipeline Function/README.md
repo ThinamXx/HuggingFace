@@ -1,9 +1,9 @@
-## **Hugging Face : Transformer Models**
+## **Hugging Face : Pipeline Function**
 
-The [**Transformer Models**](https://github.com/ThinamXx/HuggingFace/blob/main/01.%20Transformer%20Models/TransformerModels.ipynb) notebook is a comprehensive notebook as it contains a list of real world applications of **Transformers** such as **Sentiment Analysis**, **Zero-shot Classification**, **Text Generation**, **Mask Filling**, **Named Entity Recognition**, **Question Answering**, **Summarization**, and **Translation**. 
+The [**Pipeline Function**](https://github.com/ThinamXx/HuggingFace/blob/main/02.%20Pipeline%20Function/PipelineFunction.ipynb) notebook is a comprehensive notebook as it contains all three steps of the **pipeline**: preprocessing with tokenizers, passing the inputs through the model, and postprocessing the outputs.  
 
 **Note:**
-- 📑[**Transformer Models**](https://github.com/ThinamXx/HuggingFace/blob/main/01.%20Transformer%20Models/TransformerModels.ipynb) 
+- 📑[**Pipeline Function**](https://github.com/ThinamXx/HuggingFace/blob/main/02.%20Pipeline%20Function/PipelineFunction.ipynb) 
 
 **Natural Language Processing**
 - NLP is a field of linguistics and machine learning focused on understanding everything related to human language. The aim of NLP tasks is not only to understand single words individually, but to be able to understand the context of those words.
@@ -14,29 +14,19 @@ The [**Transformer Models**](https://github.com/ThinamXx/HuggingFace/blob/main/0
   - The preprocessed inputs are passed to the model.
   - The predictions of the model are post-processed, so we can make sense of them.
 
-**Sentiment Analysis**
-![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/T1.PNG)
+**Preprocessing with Tokenizer**
+- The tokenizer will be responsible for:
+  - Splitting the input into words, subwords, or symbols like puncutation that are also called tokens.
+  - Mapping each token to an integer.
+  - Adding additional inputs that may be useful to the model.
 
-**Zero-shot Classification**
-- The zero-shot-classification pipeline is very powerful, as it allows us to specify which labels to use for the classification, so we don't have to rely on the labels of the pretrained model. This pipeline is called zero-shot because we don't need to fine-tune the model on our data to use it. It can directly return probability scores for any list of labels we want.
-![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/T2.PNG)
+![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/Day%2027.PNG) 
 
-**Text Generation**
-- The main idea here is that when we provide a prompt and the model will auto-complete it by generating the remaining text.
-![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/T3.PNG)
+**Going through Model**
+- The vector output by the Transformer module is usually large. It generally has 3 dimensions:
+  - Batch size: The number of sequences processed at a time.
+  - Sequence length: The length of the numerical representation of the sequence.
+  - Hidden size: The vector dimension of each model input.
 
-**Mask Filling**
-- The idea of this task is to fill in the blanks in a given text.
+![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/Day%2027.PNG) 
 
-**Named Entity Recognition**
-- NER is a task where the model has to find which parts of the input text correspond to entities such as persons, locations, or organizations.
-
-**Question Answering**
-- The question-answering pipeline answers questions using information from a given context.
-
-**Summarization**
-- Summarization is the task of reducing a text into a shorter text while keeping all or most of the important aspects referenced in the text.
-
-**Translation**
-
-![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/Day%2026.PNG)
