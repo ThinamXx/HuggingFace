@@ -15,15 +15,15 @@ The [**Transformer Models**](https://github.com/ThinamXx/HuggingFace/blob/main/0
   - The predictions of the model are post-processed, so we can make sense of them.
 
 **Sentiment Analysis**
-![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/T1.PNG)
+![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/Day%2026.PNG)
 
 **Zero-shot Classification**
 - The zero-shot-classification pipeline is very powerful, as it allows us to specify which labels to use for the classification, so we don't have to rely on the labels of the pretrained model. This pipeline is called zero-shot because we don't need to fine-tune the model on our data to use it. It can directly return probability scores for any list of labels we want.
-![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/T2.PNG)
+![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/Day%2026.PNG)
 
 **Text Generation**
 - The main idea here is that when we provide a prompt and the model will auto-complete it by generating the remaining text.
-![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/T3.PNG)
+![Image](https://github.com/ThinamXx/MachineLearning_DeepLearning/blob/main/Images/Day%2026.PNG)
 
 **Mask Filling**
 - The idea of this task is to fill in the blanks in a given text.
