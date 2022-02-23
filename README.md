@@ -9,3 +9,6 @@ The repository contains a list of the projects which I have worked on while read
 
 [**2. PIPELINE FUNCTION**](https://github.com/ThinamXx/HuggingFace/tree/main/02.%20Pipeline%20Function)
 - The **Pipeline Function** notebook is a comprehensive notebook as it contains all three steps of the pipeline: preprocessing with tokenizers, passing the inputs through the model, and postprocessing the outputs.
+
+[**3. TOKENIZERS & MODELS**](https://github.com/ThinamXx/HuggingFace/tree/main/03.%20Tokenizers%20%26%20Models)
+- The **Tokenizers & Models** notebook contains the comprehensive information about the basic buildings blocks of a Transformer model, tokenization pipeline, limitations of input IDs, attention masks, and configurable tokenizer methods.
