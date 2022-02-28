@@ -1,1 +1,1 @@
-## **Hugging Face : Fine-tuning Pretrained Models**
+## **Hugging Face : Fine Tuning Pretrained Models**
