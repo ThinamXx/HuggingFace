@@ -1,0 +1,86 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+namespace PoPTala
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+Console.WriteLine("\n*************** Welcome ***************");
+                	Console.Write("\nPlease Enter the Input: ");
+                	var source = Console.ReadLine();
+                	string hash = string.Empty;
+                	using (SHA256 sha256Hash = SHA256.Create())
+               	 {
+                   		 hash = GetHash(sha256Hash, source);
+                    		Console.WriteLine();
+                   		 Console.WriteLine($"The SHA256 hash of \"{source}\" is: {hash}.\n");
+                	}
+                Console.WriteLine("Do you want to save this hash value into a file?");
+                Console.Write("Please Enter your decision [Y/N] : ");
+                string saveDecision = Console.ReadLine();
+                if (saveDecision.ToUpper() == "Y")
+                {
+Console.WriteLine("\nYou can provide a Location in your device to save the Hash value into a Text file.");
+Console.WriteLine("Sample Location Input - E:\\Folder1 (or) D:\\Folder1\\Fodler2 ");
+Console.WriteLine("Note: If there is already a file with name \"HashFile\" in the location, it will be overwritten.");
+                   	 Console.Write("\nPlease Enter the location: ");
+                    	string location = Console.ReadLine(); //"E:\\Videos\\Dance Videos";
+                   	
+if(location == string.Empty || location == "")
+                    {
+                        Console.WriteLine("\nLooks Like you haven't provided any location.");
+                        location = "C:\\";
+                    }
+                    string fileName = "HashFile.txt";
+                    string path = Path.Combine(location, fileName);
+                    File.WriteAllText(path, hash);
+                    Console.WriteLine("\nSaving Hash File to {0}", path);
+                    Console.WriteLine("\n\n*************** Hash File has been saved ***************");
+                    Console.WriteLine("\n\nPress any key to close this application.");
+                    Console.ReadKey();
+                }
+                else if(saveDecision.ToUpper() == "N")
+                {
+                    Console.WriteLine("\n\nPress any key to close this application.");
+                    Console.ReadKey();
+                }
+                else
+                {
+                    Console.WriteLine("\n\n\nLooks Like you have selected a different option");
+                    Console.WriteLine("\nThanks for using the app");
+                    Console.WriteLine("\n\nPress any key to close this application.");
+                    Console.ReadKey();
+                }
+            }
+            catch(Exception Ex)
+            {
+                Console.WriteLine("\n*************** Expection Occurred ***************\n");
+                Console.WriteLine("Exception: {0}", Ex.Message);
+                Console.WriteLine("\n\nPress any key to close this applcation and try again by providing correct values");
+                Console.ReadKey();
+            }
+        }
+        private static string GetHash(HashAlgorithm hashAlgorithm, string input)
+        {
+           
+            byte[] data = hashAlgorithm.ComputeHash(Encoding.UTF8.GetBytes(input));
+
+            var sBuilder = new StringBuilder();
+
+            for (int i = 0; i < data.Length; i++)
+            {
+                sBuilder.Append(data[i].ToString("x2"));
+            }
+
+            return sBuilder.ToString();
+        }
+    }
+}
